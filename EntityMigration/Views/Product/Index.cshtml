@@ -1,0 +1,19 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Products";
+}
+
+<section id="products">
+    <div class="container">
+        <input type="hidden" name="name" id="product-count" value="@ViewBag.ProductCount" />
+        <h3>Products</h3>
+        <div class="row" id="parent">
+
+            <partial name="_ProductsPartial" />
+
+        </div>
+        <div class="more d-flex justify-content-center mt-5">
+            <button id="show-more" class="btn btn-primary">Show More</button>
+        </div>
+    </div>
+</section>
